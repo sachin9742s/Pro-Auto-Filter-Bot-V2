@@ -164,6 +164,8 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
+        InlineKeyboardButton("〠  Add Me To Your Group ➕", url="https://t.me/Vijay_ProBot?startgroup=true"),
+    ],[
         InlineKeyboardButton('👤 Request Group 👤', url='https://t.me/KicchaRequest'),
         InlineKeyboardButton('MOVIE CHAMMEL 👤', url='https://t.me/GD_FILMCLUB')
     ],[
