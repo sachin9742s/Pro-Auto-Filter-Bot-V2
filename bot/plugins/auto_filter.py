@@ -76,17 +76,17 @@ async def auto_filter(bot, update):
             if file_size < 1024:
                 file_size = f"[{file_size} B]"
             elif file_size < (1024**2):
-                file_size = f"[{str(round(file_size/1024, 2))} KiB] "
+                file_size = f"[{str(round(file_size/1024, 2))} KB] "
             elif file_size < (1024**3):
-                file_size = f"[{str(round(file_size/(1024**2), 2))} MiB] "
+                file_size = f"[{str(round(file_size/(1024**2), 2))} MB] "
             elif file_size < (1024**4):
-                file_size = f"[{str(round(file_size/(1024**3), 2))} GiB] "
+                file_size = f"[{str(round(file_size/(1024**3), 2))} GB] "
             
             
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"🎬{file_size} ᚛᚜ 🗂️{file_name}"
+            button_text = f"🎬{file_size} ≫≫ 🗂️{file_name}"
             
 
             if file_type == "video":
@@ -152,7 +152,7 @@ async def auto_filter(bot, update):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("𝙽𝚎𝚡𝚝»»»", callback_data=f"navigate(0|next|{query})")
+                    InlineKeyboardButton("𝙶𝚘 𝚃𝚘 𝙽𝚎𝚡𝚝 𝙽𝚎𝚡𝚝»»»", callback_data=f"navigate(0|next|{query})")
                 ]
             )
         
@@ -209,7 +209,7 @@ async def auto_filter(bot, update):
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= MASSAGE_PHOTO,
-                caption=f"<b>🗂️Total File :- {(len_results)} </b>\n<b>🎬Movie Name :-</b> <code>{query}</code>\n \n \n      ©Group By:- [Kiccha Request](https://t.me/KicchaRequest)",
+                caption=f"<b>🎬𝐘𝐨𝐮𝐫 𝐓𝐨𝐭𝐚𝐥 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 :- {(len_results)} </b>\n<b>🎬𝐘𝐨𝐮𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐌𝐨𝐯𝐢𝐞 𝐍𝐚𝐦𝐞 :-\n   </b> <code>{query}</code>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
