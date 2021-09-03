@@ -130,7 +130,7 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_massage(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(
                 update.from_user.first_name),
