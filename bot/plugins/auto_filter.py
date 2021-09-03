@@ -190,7 +190,7 @@ async def auto_filter(bot, update):
                             InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
                         ]
                     )
-
+                
                 else:
                     ibuttons[-1].append(
                         InlineKeyboardButton(f"⚜ {chat_name} ⚜", url=invite_link)
